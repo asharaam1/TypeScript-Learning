@@ -1,0 +1,19 @@
+// cmd commads //
+first install node js from chrome
+node -v  => to check version of node.js
+npm -v 
+npm i -g typescript => to install the typescript 
+tsc -v  => to check version of typescript
+
+
+
+tsc app.ts  => app.ts ki file ko js ma convert kar dega
+tsc app.ts  -w => bar bar karne ki zarorat nhi pare gi 
+
+
+//by me copilot //
+Open PowerShell as an administrator.
+
+run this cmd => Set-ExecutionPolicy RemoteSigned
+
+Confirm the change when prompted. => A 
