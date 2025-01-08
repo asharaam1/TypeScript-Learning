@@ -1,3 +1,5 @@
+//@id:git.enabled git
+
 //? (27-12-2024)
 // TS Compiler P
 // Type Annotations
@@ -395,7 +397,7 @@
 
 
 
-//? (06-01-2025)
+//? (06-01-2025) => JavaScript Test held => made by sir abdullah not SMIT
 //!-----Generics-----//
 
 // function identity<T>(arg: T): T {
@@ -403,41 +405,45 @@
 // }
 
 // identity("adasdas")
+// console.log(identity("adasdas"));
 
 
 // function greetUser<T>(username: T): T {
 //     return username
 // }
 
-
 // greetUser(true)
+// console.log(greetUser(true));
+
+
 
 
 
 //? (08-01-2025)
 // 274 line code in sir github documentary
 
-function identityOne(val: string):string{
-    return val
-}
-function identityTwo(val: any): any {  //esko bad practice mani jati haa
-    return val
-}
+// function identityOne(val: string): string {
+//     return val
+// }
+// console.log(identityOne('Asha'));
 
+// function identityTwo(val: any): any {  //esko bad practice mani jati haa So we use Generics
+//     return val
+// }
 // console.log(identityTwo(213));
+
+
 
 // function identityThree<Type>(val: Type): Type {
 //     return val
 // }
-
-// // identityThree(true)
-
+// console.log(identityThree(true));
+// identityThree(true)
 
 // interface Car {
 //     name: string;
 //     brand: string;
 // }
-
 
 // identityThree<Car>({
 //     name: "wagnor",
@@ -446,84 +452,7 @@ function identityTwo(val: any): any {  //esko bad practice mani jati haa
 
 
 
-//-----Enums-----//
-
-// enum CardinalDirections {
-//     North,
-//     East,
-//     South,
-//     West
-// }
-
-
-// console.log(CardinalDirections.East)
-
-
-// enum User {
-//     admin = "admin",
-//     user = "user",
-//     student = "student",
-//     manager = "manager"
-// }
-
-// console.log(User.admin);
-
-
-// enum StatusCodes {
-//     NotFound = 404,
-//     Success = 200,
-//     Accepted = 202,
-//     BadRequest = 400
-// }
-
-// console.log(StatusCodes.NotFound)
-
-
-
-
-//-----Tuples-----//
-
-
-// let ourTuple: [number, boolean, string];
-// ourTuple = [20, true, "Fdfsdf"]
-
-// ourTuple.push("hello")
-
-
-// let ourTuple: readonly [number, boolean, string];
-// ourTuple = [20, true, "Fdfsdf"]
-
-// ourTuple.push("hello")
-
-
-// let ourTuple: [number, boolean, string];
-
-// ourTuple = [false, 'Coding God was mistaken', 5];
-
-
-// const ourReadonlyTuple: [number, boolean, string] = [5, true, 'The Real Coding God'];
-
-
-
-
-
-
-
-
-
-//---------Type Guards-----------//
-
-
-// function hello(str: string | number) {
-//     if (typeof str === "string") {
-//         console.log(str.toLowerCase());
-//     }
-// }
-// hello("BFSDJFBHDFB");
-// hello(324324);
-
-
-//? by me practice
+//? practice
 // function greetUser(val:string):string{
 //     return val;
 // }
@@ -547,7 +476,6 @@ function identityTwo(val: any): any {  //esko bad practice mani jati haa
 //     name: "Pizza Hut",
 //     shopNo: 5214,
 // })
-
 
 
 
@@ -575,28 +503,17 @@ function identityTwo(val: any): any {  //esko bad practice mani jati haa
 
 
 
-//! enum  => jo chiz yaaad nhi rehte usko store kar dete haan or wo hum address se access karte han
-
-// enum StatusCodes {
-//     NotFound = 404,
-//     Success = 200,
-//     Accepted = 202,
-//     BadRequest = 400
-// }
-
-// console.log(StatusCodes.NotFound);
-
-
+//!-----Enums-----//
+//todo jo chiz yaaad nhi rehte usko store kar dete haan or wo hum address se access karte han
 
 // enum CardinalDirections {
 //     North,
 //     East,
 //     South,
-//     West 
+//     West
 // }
-
+// console.log(CardinalDirections.East) // logs 1
 // console.log(CardinalDirections); //logs Object
-// console.log(CardinalDirections.South); //logs 2
 
 // let currentDirection = CardinalDirections.North;
 // console.log(currentDirection); // logs 0
@@ -606,7 +523,56 @@ function identityTwo(val: any): any {  //esko bad practice mani jati haa
 
 
 
+// enum User {
+//     admin = "Admin",
+//     user = "user",
+//     student = "student",
+//     manager = "manager"
+// }
+
+// console.log(User.admin); // logs Admin (value)
+
+
+
+// enum StatusCodes {
+//     NotFound = 404,
+//     Success = 200,
+//     Accepted = 202,
+//     BadRequest = 400
+// }
+
+// console.log(StatusCodes.NotFound)
+
+
+
 //!-----Tuples-----//
+//todo Tuples => ya array ke liye use hota haa different types of value ko add karne ke liye or es ma order mattar karta haa
+
+// let ourTuple: [number, boolean, string];
+// ourTuple = [20, true, "Fdfsdf"]
+
+// ourTuple.push("hello") // ya item add ho jaye ga or koi development error nhi dekha rha 
+
+// let ourTupleWrong: [number, boolean, string];
+// ourTupleWrong = [false, 'Coding God was mistaken', 5];
+// console.log(ourTupleWrong); //log tu hoga but development error dega
+
+
+
+//! "readonly" keayword 
+//todo good practice ya ha k ap tuples ma "readonly" ka use karein 
+// let ourTuple: readonly [number, boolean, string];
+// ourTuple = [20, true, "Fdfsdf"]
+
+// ourTuple.push("hello")  //yahin error show kar rha 
+// console.log(ourTuple); //log tu hoga but development error dega
+
+// const ourReadonlyTuple: [number, boolean, string] = [5, true, 'The Real Coding God'];
+// console.log(ourReadonlyTuple);
+
+
+
+//? practice
 // let arr: [string, number, boolean] = ['asha', 18, true]
 // console.log(arr);
 // console.log(arr.push('abdullah'));
@@ -620,10 +586,24 @@ function identityTwo(val: any): any {  //esko bad practice mani jati haa
 
 
 
+//!---------Type Guards-----------//
+//todo simple esko bolo ke hum condition laga den ga
+
+// function hello(str: string | number) {
+//     if (typeof str === "string") {
+//         console.log(str.toLowerCase());
+//     }
+//     // else {
+//     //     console.log(str);
+//     // }
+// }
+// hello("BFSDJFBHDFB");
+// hello(324324);
 
 
-//!-----Type Guard-----//
-//simple esko bolo ke hum condition laga den ga
+
+//? practice
+
 // function heyAsha(val:(string|number)){
 //     // val.toLowerCase
 //   if(typeof(val) === 'string'){
@@ -634,4 +614,9 @@ function identityTwo(val: any): any {  //esko bad practice mani jati haa
 
 // console.log(heyAsha('asgkjKSNAJX '));
 
+
+
+
+
+//? (10-01-2024)
 
