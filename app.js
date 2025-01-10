@@ -418,4 +418,132 @@
 //     }
 // }
 // console.log(heyAsha('asgkjKSNAJX '));
+//todo H.W => Type Casting
+//!---------Type Casting-----------//
+//todo A straightforward way to cast a variable is using the as keyword, which will directly change the type of the given variable.
+// let x: unknown = 'hello';
+// console.log((x as string).length); //5
+// let y: unknown = 4;
+// console.log((y as string).length); //undefined
+//todo Casting with <>
+// let z: unknown = 'hello';
+// console.log((<string>z).length); //5
 //? (10-01-2024)
+//!----- Classes-----//
+// public
+// private
+// protected
+// class Car {
+//     public name: string;
+//     // private price: number;
+//     public price: number;
+//     protected brand: string;
+//     constructor(n: string, p: number, b: string) {
+//         this.name = n;
+//         this.price = p;
+//         this.brand = b
+//     }
+//     checkCar() {
+//         return `car name is ${this.name} with price ${this.price} and manufacturer is ${this.price}`
+//     }
+// }
+// class CarTax extends Car {
+//     tax: number
+//     constructor(n: string, p: number, b: string, tax: number) {
+//         super(n, p, b)
+//         this.tax = tax
+//     }
+//     calculateTax() {
+//         return `hello ${this.price + this.tax}`
+//     }
+// }
+// const wagnor = new CarTax("Wagnor", 2000000, "suzuki", 5000000)
+// console.log(wagnor.checkCar());
+// const mehran = new CarTax('Mehran', 200000, "suzuki", 1200000)
+// console.log(mehran.calculateTax());
+// const arr: CarTax[] = []
+// const arr: Array<CarTax> = []
+// arr.push(mehran)
+// arr.push(wagnor)
+// console.log(arr);
+//? Practice
+// class Teacher {
+//     name: string;
+//     age: number;
+//     subject: string;
+//     // Constructor to initialize the properties
+//     constructor(n: string, a: number, s: string) {
+//         this.name = n;
+//         this.age = a;
+//         this.subject = s;
+//         // console.log(`Teacher  name is ${this.name}, age is ${this.age} and subject is ${this.subject}`);
+//     }
+//     // Method to log teacher's details
+//     checkTeacher() {
+//         console.log(`Teacher name is ${this.name}, age is ${this.age} and subject is ${this.subject}`);
+//     }
+// }
+// // Creating an instance or object of Teacher with name 'Asha Ram', age 18, and subject 'Maths'
+// let teacher1 = new Teacher('Asha Ram', 18, 'Maths')
+// teacher1.checkTeacher()
+// let teacher2 = new Teacher('Ali', 25, 'English')
+// teacher2.checkTeacher() //it logs the details of teacher2
+// let teacher3 = new Teacher('Abdullah', 20, 'Science')
+// console.log(teacher3); //ya object ban jaye ga
+// console.log(typeof teacher3); //Object
+// class Pay extends Teacher {
+//     pay: number;
+//     constructor(n: string, a: number, s: string, p: number) {
+//         super(n, a, s)
+//         this.pay = p;
+//     }
+//     teacherPay() {
+//         console.log(`Teacher name is ${this.name}, age is ${this.age},subject is ${this.subject} and pay is ${this.pay}`);
+//     }
+// }
+// let pay1 = new Pay('Asha Ram', 18, 'Maths', 50000)
+// pay1.teacherPay()
+// let pay2 = new Pay('Ali', 25, 'English', 30000)
+// pay2.teacherPay()
+// let pay3 = new Pay('Abdullah', 20, 'Science', 20000)
+// pay3.teacherPay()
+// public 
+// private 
+// protected
+// class Group {
+//     public name: string;
+//     // private age: number;
+//     protected age: number;
+//     protected rollNo: (number | string);
+//     constructor(n: string, a: number, r: (number | string)) {
+//         this.name = n;
+//         this.age = a;
+//         this.rollNo = r;
+//     }
+//     public checkStudent() {
+//         console.log(`Student name is ${this.name}, age is ${this.age} and roll# is ${this.rollNo}`
+//     }
+// }
+// class Student extends Group {
+//     protected contribution: number;
+//     constructor(n: string, a: number, r: (number | string), c: number) {
+//         super(n, a, r)
+//         this.contribution = c;
+//     }
+//     totalContribution() {
+//         console.log(`Total Contribution: ${this.contribution}`);
+//     }
+// }
+// let student1 = new Student('Asha Ram', 18, "B" + 248125, 7000)
+// let student2 = new Student('Ali', 25, 'B' + 248114, 5000)
+// // let arr:Student[] = [student1, student2]
+// // let arr:Array<Student> = []
+// let arr: Student[] = []
+// arr.push(student1)
+// arr.push(student2)
+// console.log(arr);
+//? TypeScript Completed 
+//todo final project ideas?
+//Quiz Application:
+//Chat Application:
+//Recipe Finder:
